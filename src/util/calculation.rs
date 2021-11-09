@@ -34,12 +34,6 @@ impl Calculation {
 
         // If data is in mass, pass it to mole
         if let CalculationData::Gram(_, ref process_molecule) = process_data {
-            println!(
-                "{} {} {:?}",
-                process_molecule.raw,
-                process_molecule.atomic_mass(),
-                process_molecule.elements
-            );
             result /= process_molecule.atomic_mass();
         }
 
